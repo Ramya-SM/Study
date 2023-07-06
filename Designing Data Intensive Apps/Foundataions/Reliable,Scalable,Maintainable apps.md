@@ -1,4 +1,4 @@
-** Reliability ** -> System continues to work correctly (functionality + perf) even in adversity (sf/hw/human error)
+## Reliability  -> System continues to work correctly (functionality + perf) even in adversity (sf/hw/human error)
 
 1. performs functions expected
 2. handles misuse or mistakes from user
@@ -27,7 +27,8 @@ Human errors    -> Configuration error by operators
                     
 -------------------------------------------------------------------------------------------------------------------
 
-** Scalability **
+## Scalability 
+
 As system grows (data/traffic volume or complexity) there should be reasonable ways of dealing with growth.
 Describing load -> req/sec, ration of read to write in db, active sers in chat room, hit rate on cache
 Describing perf -> once load is described. latency vs response time -> waiting time for a req,  
@@ -38,7 +39,7 @@ Describing perf -> once load is described. latency vs response time -> waiting t
                     Calculating percentiles -> sort response times and calculate based on it in a rolling window of lets say last 10mins. 
                                                 Or can use algorithms such as forward decay, t-digest, HdrHistogram
                                                 Averaging percentiles from diff nodes is meaningless, right way to aggregate is to add histograms.
-                                                Refer: <a> https://orangematter.solarwinds.com/2016/11/18/why-percentiles-dont-work-the-way-you-think/ </a>
+                                                Refer: https://orangematter.solarwinds.com/2016/11/18/why-percentiles-dont-work-the-way-you-think/ 
 -------------------------------------------------------------------------------------------------------------------
 
 ** Maintainability **
