@@ -50,4 +50,30 @@ Deliberately trigger faults to make system tolerant
 
 ## Maintainability -> people who work on system (ops,eng) should be able to maintain current functionality and adapt system to new usecases.
 
+#### Operability
+Ops team responsibility->
+Monitoring health of system & restore if it goes down
+Tracking down cause of problems
+Sw updates , secutrity patches
+Depenedency & affects of change on all system
+Anticipating furture problems (Capacity planning)
+Good practices for config mgmt, tools for deployment
+moving apps from platform tp another
+maintianing security with changing config
+
+
+#### Simplicity
+Accidental Complexity -> complexity added from implemenattion but not part of the problem system is solving
+Abstraction is the best way to remove accidental complexity. 
+  ex: high level lang to hide machine code , CPU registers, syscals
+      SQL hides complex on-disk & inmemory DS, concurrent req from other clients, inconsistencies after crash
+
+#### Evolvability
+Agile patterns provide framework for adapting to change like TDD , refactoring
+The ease with which u adapt to changing requirements & ease of modifying data systems is closely linked to its simplicity & its abstractions.
+
+ 
+
+
+
 
