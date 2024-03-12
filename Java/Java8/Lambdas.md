@@ -1,3 +1,4 @@
+<html style="code-fold:true;">
 In many cases there is no need of creating multiple preexisting classes, an anonymous class object created in the code where required should be enough.
 Anonymous class when has just one overriden method & simple code then simplified version of it is Lambda functions, enabling functions to be passed as arguments.
 
@@ -30,7 +31,7 @@ Collections.sort(persons, (p1, p2) -> p1.getName().compareTo(p2.getName()));
 
 <hr/>
 
-<h4> Inbuilt Functional Interfaces </h4>
+<h3> Inbuilt Functional Interfaces </h3>
 
   1. Java 8 provides some in-built functional interfaces in the java.util.function package
   2. There are 43 such & can be divided into categories such as 
@@ -38,7 +39,7 @@ Collections.sort(persons, (p1, p2) -> p1.getName().compareTo(p2.getName()));
       * Supplier
       * Consumer
 
-<h4> Introduction to the Predicate functional interface <h4/>
+<h3> Introduction to the Predicate functional interface </h3>
 The Predicate<T> interface has few static/default methods & one abstract method test()
 an(), isEqual(), or(), negate() , test()
 type of Predicate : Predicate, BiPredicate, IntPredicate, Longredicate, DoublePredicate
@@ -58,7 +59,7 @@ type of Predicate : Predicate, BiPredicate, IntPredicate, Longredicate, DoublePr
 </pre>
 <hr/>
 
-<h4> Introduction to the Supplier functional interface <h4/>
+<h3> Introduction to the Supplier functional interface </h3>
 useful when no arg to be provided but get values
 get(), getAsInt(), getAsLong(), getAsDouble(), getAsBoolean()
 <pre>
@@ -72,7 +73,7 @@ get(), getAsInt(), getAsLong(), getAsDouble(), getAsBoolean()
   </code>
 </pre>
 
-<h4> Introduction to the Consumer functional interface <h4/>
+<h3> Introduction to the Consumer functional interface </h3>
 1. take in a parameter and do not produce anything. 
 2. Has an abstract method accept(ref) , a default method andThen(Consumer)
 Consumer, DoubleConsumer, IntConsumer, LongConsumer, BiConsumer, ObjIntConsumer, ObjDoubleConsumer, ObjLongConsumer
@@ -86,7 +87,7 @@ accept(ref), accept(double), accept(int), accept(long), accept(ref,ref),accept(r
   </code>
 </pre>
 
-<h4> Introduction to the functional functional interface <h4/>
+<h3> Introduction to the functional functional interface </h3>
 takes an object of type T and returns an object of type R.
 (Predicate returns Boolean, Consumer returns nothing but takes args, Supplier takes nothing returns values, functional takes&returns)
   Interfaces -> Function  , IntFunction , BiFunction        , ToIntBiFunction          , LongToIntFunction/DoubleToIntFunction/ToIntFunction  ...same for long/double
@@ -104,6 +105,35 @@ has other methods like andThen(Function T, Function after), compose(Function T, 
     System.out.println("Sum = " + add.apply(2, 3))
   </code>
 </pre>
+
+<h3> Introduction to the Unary, Binary operator </h3>
+Unary: Implements Functional interface, so takes a value & returns a value of same type
+Binary: Implements BiFunction interface, but unlike BiFunction it takes only one type of params
+
+<pre><code >
+	IntUnaryOperator operator = num -> num * num;
+	System.out.println(operator.applyAsInt(25));
+	IntBinaryOperator op = (o1, o2) -> o1 + o2;
+	System.out.println(op.applyAsInt(5, 10));
+</code></pre>
+
+<h3> Capturing Lambdas </h3>
+When lambdas use the static variable / instance variable / local variable(which is final/effectively final(not changed after initialization))
+<pre><code>
+	int i=9;
+	Function<Integer> f = (val) -> val * i;
+	f.apply(10);	
+</code></pre>
+
+
+
+
+
+
+
+
+
+
 
 
 
