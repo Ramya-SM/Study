@@ -1,4 +1,4 @@
-<html style="code-fold:true;">
+
 In many cases there is no need of creating multiple preexisting classes, an anonymous class object created in the code where required should be enough.
 Anonymous class when has just one overriden method & simple code then simplified version of it is Lambda functions, enabling functions to be passed as arguments.
 
@@ -8,7 +8,8 @@ Ideal candidates to be Lambdas
 1. Functional interface
 2. Has only one abstract method to override
 
-<br/>
+<hr/>
+
 <pre>
 <code>
 import java.util.Collections;
